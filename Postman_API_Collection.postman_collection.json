@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "c1c62791-e2c8-4b17-8755-bf8ce945f072",
+		"name": "Postman_API_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16498892"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjI2MjY4NCwianRpIjoiNDM3MTc5ZjItNTFkMi00MDRhLWFlMTAtZTBmNDcxNjUxYjM1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2MjYyNjg0LCJjc3JmIjoiODllZjA3MzQtMDk4Mi00NDRhLTgzMWQtZDA1YjJlYTliNGNkIiwiZXhwIjoxNzA2MjY2Mjg0fQ.qMsl1Lawj2AVn9iwNiDxxuNhm_noHBJkBfUUq4_UZWc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"vitb\",\r\n    \"author\":\"dr.vellore\",\r\n    \"isbn\":\"bhopal\",\r\n    \"price\":56700,\r\n    \"quantity\":10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/book/backend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book",
+						"backend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/book/backend",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/book/backend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book",
+						"backend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/book/backend",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjI2MjY4NCwianRpIjoiNDM3MTc5ZjItNTFkMi00MDRhLWFlMTAtZTBmNDcxNjUxYjM1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2MjYyNjg0LCJjc3JmIjoiODllZjA3MzQtMDk4Mi00NDRhLTgzMWQtZDA1YjJlYTliNGNkIiwiZXhwIjoxNzA2MjY2Mjg0fQ.qMsl1Lawj2AVn9iwNiDxxuNhm_noHBJkBfUUq4_UZWc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\": \"farwiseai2\",\r\n    \"isbn\": \"backend2\",\r\n    \"price\": 567.0,\r\n    \"quantity\": 100,\r\n    \"title\": \"FarmwiseAI2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/book/backend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book",
+						"backend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/book/bhopal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjI2MjY4NCwianRpIjoiNDM3MTc5ZjItNTFkMi00MDRhLWFlMTAtZTBmNDcxNjUxYjM1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2MjYyNjg0LCJjc3JmIjoiODllZjA3MzQtMDk4Mi00NDRhLTgzMWQtZDA1YjJlYTliNGNkIiwiZXhwIjoxNzA2MjY2Mjg0fQ.qMsl1Lawj2AVn9iwNiDxxuNhm_noHBJkBfUUq4_UZWc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/book/bhopal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book",
+						"bhopal"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
